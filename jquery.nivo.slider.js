@@ -475,9 +475,9 @@
                 firstSlice = $('.nivo-slice:first', slider);
                 firstSlice.css({
                     'width': slider.width() + 'px'
-                });
-    
-                firstSlice.animate({ opacity:'1.0' }, (settings.animSpeed*2), '', function(){ slider.trigger('nivo:animFinished'); });
+                });                
+
+                firstSlice.fadeIn(3000, function(){ slider.trigger('nivo:animFinished'); });
             } else if(currentEffect === 'slideInRight'){
                 createSlices(slider, settings, vars);
                 
